@@ -10,7 +10,7 @@
 
 using namespace std;
 
-void insection_sort(int arr[], int size){
+void insertion_sort(int arr[], int size){
     for(int i = 1; i < size; i++){
         int insert = arr[i];
         int index = i - 1;
@@ -24,14 +24,21 @@ void insection_sort(int arr[], int size){
 
 
 int main(int argc, const char * argv[]) {
-    int nums[] = {5,3,7,2,1,9,14,8,7,4,30,18,1,23,27};
-    int size = sizeof(nums) / sizeof(int);
-    //one int is 4 bytes.
-    
-    insection_sort(nums, size);
-    
+    int size; 
+    cin >> size ;
+
+    int nums[size];
+
     for(int i = 0; i < size; i++){
-        cout << nums[i] << " ";
+        cin >> nums[i];
+    }
+
+    
+    insertion_sort(nums, size);
+
+    cout << endl;
+    for(int i = 0; i < size; i++){
+        cout << nums[i] << endl;
     }
     
     return 0;
