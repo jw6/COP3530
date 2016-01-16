@@ -13,12 +13,13 @@ using namespace std;
 void insertion_sort(int arr[], int size){
     for(int i = 1; i < size; i++){
         int insert = arr[i];
-        int index = i - 1;
-        while(index >= 0 && insert < arr[index]){
-            arr[index+1] = arr[index];
-            index--;
+        int j = i - 1;
+        while(j >= 0 && insert < arr[j]){
+            arr[j+1] = arr[j];
+            j--;
+            /*compare right to left*/
         }
-        arr[index+1] = insert;
+        arr[j+1] = insert;
     }
 }
 
